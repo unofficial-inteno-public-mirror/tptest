@@ -453,9 +453,9 @@ int main(int argc, char **argv) {
 void log_text(int level) {
   if (no_output) return;
   if (syslog_verbosity >= level)
-    syslog(LOG_NOTICE, output_text);
+	  syslog(LOG_NOTICE, "%s", output_text);
   if (verbosity >= level)
-    printf(output_text);
+	  printf("%s", output_text);
 }
 
 
